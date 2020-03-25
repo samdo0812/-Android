@@ -12,6 +12,7 @@ var e = "My name is $d Nice to meet you"
 var abc1 : Int? = null
 var abc2 : Double? = null
 
+
 fun main(array: Array<String> ){
     println(a)
     println(b)

@@ -50,5 +50,5 @@ fun main(args: Array<String>) {
             println("value is in 80-90")
         }
     }
-    
+
 }

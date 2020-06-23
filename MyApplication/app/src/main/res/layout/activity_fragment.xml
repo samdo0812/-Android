@@ -20,5 +20,19 @@
         android:id="@+id/fragment_one"
         android:name="com.example.myapplication.FragmentOne"
         android:layout_width="match_parent"
-        android:layout_height="500dp"/>
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="go"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:id="@+id/container"
+        android:background="@color/colorPrimary"
+        />
 </LinearLayout>

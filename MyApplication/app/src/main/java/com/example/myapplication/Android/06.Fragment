@@ -16,3 +16,7 @@ Fragment
     Fragment
     - 라이플 사이클이 존재한다
     - 엑티비티 종속적이다
+
+    사용방법
+    - xml에 ViewComponent로 추가한다
+    - 코드로(동적)으로 추가한다

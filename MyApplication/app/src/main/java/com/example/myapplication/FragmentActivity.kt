@@ -6,7 +6,11 @@ import android.util.Log
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_fragment.*
 
-class FragmentActivity : AppCompatActivity() {
+class FragmentActivity : AppCompatActivity(), FragmentOne.onDataPassListener {
+
+    override fun onDataPass(data: String?) {
+        Log.d("pass", "fragment -> activity 데이터 전달 ; "+data)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,4 +74,6 @@ class FragmentActivity : AppCompatActivity() {
         Log.d("life_cycle","onDestroy")
         super.onDestroy()
     }
+
+
 }

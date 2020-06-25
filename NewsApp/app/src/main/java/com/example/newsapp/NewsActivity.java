@@ -52,7 +52,7 @@ public class NewsActivity extends AppCompatActivity {
 
     public void getNews(){
         // Instantiate the RequestQueue.
-        String url ="key";
+        String url ="http://newsapi.org/v2/top-headlines?country=kr&apiKey=022127a02179491895de9009ef5cc332";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,

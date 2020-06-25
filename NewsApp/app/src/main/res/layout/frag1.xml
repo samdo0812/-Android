@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="281dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".NewsActivity">
 
@@ -15,109 +15,56 @@
          android:layout_marginRight="30dp"
          app:cardCornerRadius="8dp"
          android:layout_marginTop="30dp"
+         android:layout_marginBottom="30dp"
          android:layout_marginLeft="30dp"
-         android:layout_height="173dp">
+         android:layout_height="90dp">
 
           <LinearLayout
               android:background="@drawable/bg1"
               android:layout_width="match_parent"
               android:orientation="vertical"
               android:layout_height="match_parent">
-
                <LinearLayout
+                   android:background="#ffffff"
+                   android:layout_width="match_parent"
+                   android:layout_height="20dp"
+                   android:layout_weight="1">
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_weight="2"
                    android:orientation="horizontal"
                    android:layout_width="match_parent"
-                   android:layout_marginLeft="30dp"
+                   android:layout_marginLeft="20dp"
                    android:layout_marginTop="20dp"
-                   android:layout_marginRight="30dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_marginBottom="20dp"
                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_height="wrap_content">
 
                          <TextView
                              android:textSize="24dp"
                              android:textColor="#ffff"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:text="Busan"/>
+                             android:layout_weight="1"
+                             android:gravity="center"
+                             android:text="Kor"/>
 
                          <TextView
-                             android:textSize="16dp"
+                             android:textSize="24dp"
                              android:textColor="#ffff"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:text="Current Location"/>
-
-                    </LinearLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                    </RelativeLayout>
-               </LinearLayout>
-
-
-               <LinearLayout
-                   android:layout_marginLeft="30dp"
-                   android:layout_marginTop="20dp"
-                   android:layout_marginRight="30dp"
-                   android:orientation="horizontal"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="28"
-                        android:textSize="40dp"
-                        android:textColor="#ffff"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_height="wrap_content">
-
-                         <TextView
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:textColor="#ffff"
-                             android:text="o"
-                             android:layout_marginTop="4dp"
-                             android:layout_marginLeft="6dp"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0 %"
-                        android:textColor="#ffff"
-                        android:textSize="20dp"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginLeft="8dp"/>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                         <TextView
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:text="3 : 42pm"
-                             android:textSize="20dp"
-                             android:layout_marginTop="12dp"
-                             android:layout_alignParentRight="true"
-                             android:textColor="#ffff "/>
-
-                    </RelativeLayout>
+                             android:layout_weight="1"
+                             android:gravity="center"
+                             android:text="For"/>
 
                </LinearLayout>
           </LinearLayout>
 
+
+
      </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>

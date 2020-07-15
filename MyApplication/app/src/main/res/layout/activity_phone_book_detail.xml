@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#040303"
+    tools:context=".PhoneBookDetailActivity">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/back"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        />
+
+    <ImageView
+
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/person_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="abc"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:id="@+id/person_detail_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="010"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        />
+</LinearLayout>

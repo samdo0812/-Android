@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_list_view.*
 
 class ListViewActivity : AppCompatActivity() {
@@ -23,18 +24,40 @@ class ListViewActivity : AppCompatActivity() {
 
         val adapter = ListViewAdapter(carList, LayoutInflater.from(this))
         listVIew.adapter = adapter
+
+        listVIew.setOnItemClickListener{
+                parent, view, posion, id ->
+            val carName = (adapter.getItem(posion) as CarForList).name
+            val carEngine = (adapter.getItem(posion) as CarForList).engine
+
+            Toast.makeText(this,carName+""+carEngine,Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
 
 class ListViewAdapter(val carForList: ArrayList<CarForList>, val layoutInflater: LayoutInflater ) : BaseAdapter(){
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         //val layoutInflater =  LayoutInflater.from(layoutInflater)
-        val view = layoutInflater.inflate(R.layout.item_view,null)
-        val carNameTextview = view.findViewById<TextView>(R.id.car_name)
-        val carEngineTextView = view.findViewById<TextView>(R.id.car_engine)
+        val view: View
+        val holder: viewHolder
 
-        carNameTextview.setText(carForList.get(position).name)
-        carEngineTextView.setText(carForList.get(position).engine)
+        if(convertView == null){
+            view = layoutInflater.inflate(R.layout.item_view,null)
+            holder = viewHolder()
+
+            holder.carName = view.findViewById(R.id.car_name)
+            holder.carEngine = view.findViewById(R.id.car_engine)
+
+            view.tag = holder
+        }
+        else{
+            holder = convertView.tag as viewHolder
+            view = convertView
+        }
+
+        holder.carName?.setText(carForList.get(position).name)
+        holder.carEngine?.setText(carForList.get(position).engine)
 
         return view
     }
@@ -53,4 +76,9 @@ class ListViewAdapter(val carForList: ArrayList<CarForList>, val layoutInflater:
         //그리고자 하는 아이템 리스트의 전체 개
         return carForList.size
     }
+}
+
+class viewHolder{
+    var carName:TextView? = null
+    var carEngine:TextView? = null
 }

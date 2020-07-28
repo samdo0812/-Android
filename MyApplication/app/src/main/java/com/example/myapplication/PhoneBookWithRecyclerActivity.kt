@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,7 +20,7 @@ class PhoneBookWithRecyclerActivity : AppCompatActivity() {
 
 
         val phoneBook = createFakePhoneBook(faskeNumber = 30)
-        val phoneBookRecyclerAdapter = PhoneBookRecyclerAdapter(phoneBook, LayoutInflater.from(this))
+        val phoneBookRecyclerAdapter = PhoneBookRecyclerAdapter(phonebookList= phoneBook , inflater = LayoutInflater.from(this), acitivity = this)
         phonebook_recycler_view.adapter = phoneBookRecyclerAdapter
         phonebook_recycler_view.layoutManager = LinearLayoutManager(this)
 
@@ -35,13 +37,20 @@ class PhoneBookWithRecyclerActivity : AppCompatActivity() {
 
 class PhoneBookRecyclerAdapter(
     val phonebookList : PhoneBook,
-    val inflater: LayoutInflater
+    val inflater: LayoutInflater,
+    val acitivity: Activity
 ): RecyclerView.Adapter<PhoneBookRecyclerAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         val personName : TextView
         init {
             personName = itemView.findViewById(R.id.person_name)
+            itemView.setOnClickListener {
+                val intent = Intent(acitivity, PhoneBookDetailActivity::class.java)
+                intent.putExtra("name" ,phonebookList.personList.get(adapterPosition).name)
+                intent.putExtra("number", phonebookList.personList.get(adapterPosition).number )
+                acitivity.startActivity(intent)
+            }
         }
     }
 

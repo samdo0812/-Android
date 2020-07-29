@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_one.*
 
 
 class FragmentOne: Fragment(){
-
+    /*
     interface onDataPassListener{
         fun onDataPass(data: String?)
     }
@@ -91,4 +91,5 @@ class FragmentOne: Fragment(){
         Log.d("life_cycle","F onDetach")
         super.onDetach()
     }
+    */
 }

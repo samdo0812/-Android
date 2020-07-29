@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_fragment.*
-
-class FragmentActivity : AppCompatActivity(), FragmentOne.onDataPassListener {
+/*
+class FragmentActivity : AppCompatActivity(), FragmentOne {
 
     override fun onDataPass(data: String?) {
         Log.d("pass", "fragment -> activity 데이터 전달 ; "+data)
@@ -77,3 +77,4 @@ class FragmentActivity : AppCompatActivity(), FragmentOne.onDataPassListener {
 
 
 }
+*/

@@ -18,7 +18,7 @@ class fragment3: Fragment(){
         //fragment가 인터페이스를 처음으로 그릴 때 호출된다
         //inflater ->  뷰를 그려주는 애
         //container -> 부모뷰(내가, 프래그먼트가 붙을 곳)
-        return inflater.inflate(R.layout.fragment_one, container, false)
+        return inflater.inflate(R.layout.fragment_three, container, false)
 
         //return super.onCreateView(inflater, container, savedInstanceState)
     }

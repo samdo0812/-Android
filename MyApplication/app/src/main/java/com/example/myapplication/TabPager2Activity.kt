@@ -35,7 +35,7 @@ class TabPager2Activity : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 view_pager.currentItem = tab!!.position
             }
-        }) 
+        })
     }
 }
 
